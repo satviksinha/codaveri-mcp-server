@@ -6,7 +6,7 @@ import z from "zod";
 
 dotenv.config({ path: ".env.development.local", quiet: true });
 
-const CODAVERI_API_BASE_URL = "https://staging.codaveri.com";
+const CODAVERI_API_BASE_URL = process.env.CODAVERI_API_BASE_URL;
 const apiKey = process.env.API_KEY;
 if (!apiKey) {
   throw new Error("API_KEY is not set in .env.development.local");
