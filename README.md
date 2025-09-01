@@ -7,7 +7,7 @@ This is a Model-Context-Protocol (MCP) server for the Codaveri API, allowing you
 1.  Clone the repository:
 
     ```sh
-    git clone <repository-url>
+    git clone https://github.com/satviksinha/codaveri-mcp-server.git
     cd codaveri-mcp-server
     ```
 
