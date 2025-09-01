@@ -1,0 +1,28 @@
+{
+  "name": "codaveri-mcp-server",
+  "version": "1.0.0",
+  "description": "mcp server for codaveri API",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "bin": {
+    "codaveri": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod 755 build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.4",
+    "dotenv": "^17.2.1",
+    "node-fetch": "^3.3.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "typescript": "^5.9.2"
+  }
+}
