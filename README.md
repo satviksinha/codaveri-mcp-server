@@ -8,7 +8,6 @@ This is a Model-Context-Protocol (MCP) server for the Codaveri API, allowing you
 
     ```sh
     git clone https://github.com/satviksinha/codaveri-mcp-server.git
-    cd codaveri-mcp-server
     ```
 
 2.  Install the dependencies:
@@ -21,7 +20,8 @@ This is a Model-Context-Protocol (MCP) server for the Codaveri API, allowing you
 1.  Create a `.env.development.local` file in the root of the project.
 2.  Add your Codaveri API key to the file:
     ```
-    API_KEY=your_codaveri_api_key
+    API_KEY=<your_codaveri_api_key>
+    CODAVERI_API_BASE_URL=<codaveri-url>
     ```
 
 ## Building the Server
