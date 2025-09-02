@@ -165,6 +165,12 @@ server.tool(
           const result: ResponseExecute = await response.json();
           return result;
         }
+        if (response.status >= 400) {
+          const errorBody = await response.text();
+          throw new Error(
+            `Polling API Error: ${response.status} ${response.statusText} - ${errorBody}`
+          );
+        }
         await new Promise((resolve) => setTimeout(resolve, 1000));
         return poll();
       };
@@ -174,7 +180,7 @@ server.tool(
         content: [
           {
             type: "text",
-            text: result.data.IOResults[0].run.stdout || "No output",
+            text: result.data.IOResults[0].run.stdout || result.data.IOResults[0].run.stderr || "No output",
           },
         ],
       };
