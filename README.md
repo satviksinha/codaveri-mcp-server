@@ -24,6 +24,17 @@ This is a Model-Context-Protocol (MCP) server for the Codaveri API, allowing you
     CODAVERI_API_BASE_URL=<codaveri-url>
     ```
 
+## Environment Variables
+
+Create a `.env.development.local` file in the root of the project with the following variables:
+
+```
+API_KEY=<your_codaveri_api_key>
+CODAVERI_API_BASE_URL=<api-url>
+```
+
+Replace `your_codaveri_api_key` with your actual API key.
+
 ## Building the Server
 
 To build the server, run the following command:
