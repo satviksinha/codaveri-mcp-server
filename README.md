@@ -24,6 +24,22 @@ This is a Model-Context-Protocol (MCP) server for the Codaveri API, allowing you
     CODAVERI_API_BASE_URL=<codaveri-url>
     ```
 
+## Using this MCP server from any repo
+
+When you run the `codaveri` MCP server from another repository (your client repo or any working directory), it looks for environment variables in a `.env.development.local` file in the current working directory.
+
+- Create a `.env.development.local` file in that repo as well, with the same variables:
+
+```
+API_KEY=your_codaveri_api_key
+CODAVERI_API_BASE_URL=https://staging.codaveri.com
+```
+
+Notes:
+
+- The file must be placed in the repo where you execute the `codaveri` command (because dotenv loads from the current working directory).
+- Alternatively, you can export these variables in your shell environment instead of using the file.
+
 ## Building the Server
 
 To build the server, run the following command:
